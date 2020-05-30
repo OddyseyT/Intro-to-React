@@ -18,8 +18,9 @@ function Character (props) {
       <CardBody>
       <CardImg src={character.image}>
          </CardImg>
-        <CardText>{character.status}</CardText>
-        <CardText>{character.species}</CardText>
+        <CardText>{`Status: ${character.status}`}</CardText>
+        <CardText>{`Species: ${character.species}`}</CardText>
+        <CardText>{character.gender}</CardText>
       </CardBody>
       <CardFooter>{`Created: ${character.created}`}
       </CardFooter>
