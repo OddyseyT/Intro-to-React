@@ -21,18 +21,19 @@ const handleChange = e => {
   // sync up with, if any.
   axios.get("https://rickandmortyapi.com/api/character")
   .then(response => {
+    console.log(response.data.results)
     const initialArr = response.data.results
     const filteredData = initialArr.filter( (character) => {
-      return character.name.toLowerCase().includes.toLowerCase(searchTerm)
+      return character.name.toLowerCase().includes(searchTerm.toLowerCase())
     }
     )
-console.log(initialArr)
+
   setChar(filteredData)
     //setChar(response.data.results);
   },
 
   )
-  .catch(err => {console.log("something went wrong")})
+  .catch(err => {console.log("something went wrong", err)})
 
 .then(() => {console.log("success")})
 
