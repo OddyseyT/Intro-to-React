@@ -16,7 +16,7 @@ const [char, setChar] = useState([]);
   axios.get("https://rickandmortyapi.com/api/character")
   .then(response => {
     console.log(response.data)
-    setChar(response.data);
+    setChar(response.data.results);
   }
 
   )
